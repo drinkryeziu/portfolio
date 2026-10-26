@@ -282,8 +282,8 @@ export default function Home() {
                 </h2>
                 <p style={{ margin: "0", maxWidth: "560px", fontSize: "17px", lineHeight: "28px" }}>Have a project in mind? Get in touch with me, and we&apos;ll figure out how to bring it to life.</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-                  <a href="mailto:[your@email.com]" className="dm-btn paper-solid">EMAIL ME</a>
-                  <a href="#contact" className="dm-btn paper-line">LINKEDIN</a>
+                  <a href="mailto:drinkryeziu@gmail.com" className="dm-btn paper-solid">EMAIL ME</a>
+                  <a href="https://www.linkedin.com/in/drinkryeziu/" className="dm-btn paper-line">LINKEDIN</a>
                   <a href="https://github.com/drinkryeziu" className="dm-btn paper-line">GITHUB</a>
                 </div>
               </div>

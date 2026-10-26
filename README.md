@@ -46,8 +46,7 @@ Screens live in `public/images/krzresumebuilder/{phone,tablet,desktop}/<name>.jp
 
 Search `app/page.tsx` for these:
 
-- `mailto:[your@email.com]`: your email for the "EMAIL ME" button
-- The LinkedIn and Download CV buttons (they point to `#contact` for now; GitHub already links to github.com/drinkryeziu)
+- The Download CV button (points to `#contact` for now)
 - Experience: `[Job title] · [Company]`, `[YEAR]` ranges and the one-line descriptions
 - Dev project 03: `[Project name]`, its description and image
 
