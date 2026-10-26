@@ -120,3 +120,14 @@
   .np-story h3{font-size:22px}
   .np-foot{flex-direction:column;align-items:center;gap:8px}
 }
+
+/* Letters to the Editor: the reference, set as a boxed letter */
+.np-letter{margin:18px auto 26px;max-width:860px;border:2px solid var(--rule);outline:1px solid var(--rule);outline-offset:4px;padding:22px 26px}
+.np-letter-head{margin:0 0 12px;text-align:center;font-family:'Playfair Display',serif;font-style:italic;font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.15}
+.np-letter-body{columns:2;column-gap:28px;column-rule:1px solid var(--rule);text-align:justify;hyphens:auto}
+.np-letter-body p{margin:0 0 10px}
+.np-letter-body p+p{text-indent:1.2em}
+.np-letter-sign{margin:14px 0 0;text-align:right;font-family:'Playfair Display',serif;font-weight:900;font-size:22px}
+.np-letter-sign small{display:block;font-family:'Old Standard TT',serif;font-weight:400;font-style:italic;font-size:14px}
+.np-letter-note{margin:10px 0 0;font-size:12px;letter-spacing:1px;text-transform:uppercase;text-align:center;color:var(--soft)}
+@media (max-width:600px){.np-letter{padding:16px 14px}.np-letter-body{columns:auto;column-rule:none;text-align:left}.np-letter-sign{text-align:left}}

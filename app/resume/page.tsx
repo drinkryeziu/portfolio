@@ -194,6 +194,26 @@ export default function ResumePage() {
         </div>
 
         <h2 className="np-sec np-ink">
+          Letters to the Editor <small>A word from a former manager</small>
+        </h2>
+        <section className="np-letter" aria-label="Reference from Ajay Pillai">
+          <p className="np-letter-head np-ink">&ldquo;I hit the jackpot with him.&rdquo;</p>
+          <div className="np-letter-body">
+            <p className="np-drop">
+              Ajay Pillai hired Drin as a UX engineer on his Wells Fargo team, and writes that the decision paid off quickly. Drin arrived with a strong portfolio, and Pillai warned him that a large bank leaves little room for creative freedom. Drin took that as a brief rather than a limit: he worked closely with product owners, stayed inside the bank&apos;s design guardrails, and still turned their needs into thoughtful UX and CX designs and prototypes, fast.
+            </p>
+            <p>
+              His work ethic kept development moving at a steady pace, and he held tightly to deadlines. Beyond the craft, Pillai remembers the attitude: positive, eager and can-do, valued not only by him but by everyone on his team. He describes Drin as a joy to work with, and calls his letter only a snapshot of what Drin brings.
+            </p>
+          </div>
+          <p className="np-letter-sign np-ink">
+            Ajay Pillai
+            <small>Software Engineering Manager, Wells Fargo Technology · Drin&apos;s hiring manager</small>
+          </p>
+          <p className="np-letter-note">Summarized from his reference letter. Contact details available on request.</p>
+        </section>
+
+        <h2 className="np-sec np-ink">
           Classifieds <small>Skills, tools and specialties</small>
         </h2>
         <div className="np-ads">
