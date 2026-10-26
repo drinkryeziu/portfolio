@@ -209,7 +209,8 @@ export default function ResumePage() {
             </div>
             <p className="np-letter-sign np-ink">
               Ajay Pillai
-              <small>Software Engineering Manager, Wells Fargo Technology · Drin&apos;s hiring manager</small>
+              <small>Head of Application Architecture · Banking &amp; Insurance Modernization, AI/GenAI, Multi-Cloud, DevSecOps, Scaled Agile</small>
+              <small>Drin&apos;s hiring manager at Wells Fargo; they later worked together again at First Bank</small>
             </p>
           </section>
           <section className="np-letter" aria-label="Reference from Fatos Shita">
