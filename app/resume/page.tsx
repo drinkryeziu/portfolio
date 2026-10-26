@@ -75,7 +75,7 @@ export default function ResumePage() {
       <div className="np-sheet">
         <div className="np-strip">
           <Link href="/">← Back to the desk</Link>
-          <span>Résumé edition · May 2026</span>
+          <span className="np-hide-sm">Résumé edition · May 2026</span>
           <a href={PDF} download>
             Download the PDF ↓
           </a>
@@ -93,7 +93,7 @@ export default function ResumePage() {
         <div className="np-dateline np-ink">
           <span>Vol. XX · No. 2026</span>
           <span>Cornelius, North Carolina</span>
-          <span>UX · Product · Design Systems · Accessibility</span>
+          <span className="np-hide-sm">UX · Product · Design Systems · Accessibility</span>
         </div>
 
         <section className="np-head np-ink">
@@ -105,14 +105,14 @@ export default function ResumePage() {
         </section>
 
         <div className="np-grid">
-          <div className="np-col first np-c3">
+          <div className="np-col first np-c3 np-left">
             <figure className="np-photo">
               <div className="frame">
                 {PHOTO ? <img src={PHOTO} alt="Drin Kryeziu" /> : <span>Portrait to come</span>}
               </div>
               <figcaption className="np-ink">Drin Kryeziu, Senior UX/UI and Product Designer, at work in Cornelius, N.C.</figcaption>
             </figure>
-            <div className="np-box np-ink">
+            <div className="np-box np-ink np-numbers">
               <h4>By the numbers</h4>
               <div className="np-num">
                 <b>20+</b>
@@ -129,7 +129,7 @@ export default function ResumePage() {
             </div>
           </div>
 
-          <article className="np-col np-c6">
+          <article className="np-col np-c6 np-lead">
             <p className="np-by np-ink">By the Chronicle staff · Cornelius, N.C.</p>
             <div className="np-text c2 np-ink">
               <p className="lead np-drop">
@@ -154,7 +154,7 @@ export default function ResumePage() {
             </blockquote>
           </article>
 
-          <aside className="np-col last np-c3">
+          <aside className="np-col last np-c3 np-side">
             <div className="np-box np-ink" style={{ marginTop: 0 }}>
               <h4>Read the full record</h4>
               <p style={{ margin: 0, fontSize: 14, textAlign: "center" }}>The complete résumé, with every role, skill and achievement, is available to take home.</p>

@@ -91,6 +91,29 @@
   .np-photo .frame{aspect-ratio:4/3}
 }
 @media (max-width:600px){
-  .np-title{white-space:normal}
+  .np-sheet{padding:12px 16px 48px}
+  .np-hide-sm{display:none}
+  .np-strip{flex-wrap:nowrap;font-size:12px}
+  .np-title{white-space:normal;font-size:clamp(38px,12vw,56px);line-height:1.05}
+  .np-mast{padding:8px 0 4px}
+  .np-dateline{flex-wrap:nowrap;font-size:11px;letter-spacing:.5px}
+  .np-head{padding:16px 0 12px}
+  .np-h1{font-size:clamp(34px,10.5vw,48px);letter-spacing:-.5px}
+  .np-deck{font-size:18px}
+  /* reading order on a phone: headline, photo, story, numbers, download */
+  .np-left{display:contents}
+  .np-photo{grid-column:span 12;order:1;padding:14px 0 6px}
+  .np-lead{order:2}
+  .np-numbers{grid-column:span 12;order:3;margin:18px 4px}
+  .np-side{order:4}
+  .np-photo .frame{aspect-ratio:4/5;max-width:300px;margin:0 auto}
+  .np-photo .frame img{object-position:top}
+  .np-photo figcaption{text-align:center}
+  .np-text,.np-story p{text-align:left;hyphens:auto}
   .np-text.c2,.np-text.c3{columns:1}.np-ads{columns:1}
+  .np-drop::first-letter{font-size:58px}
+  .np-quote{font-size:22px}
+  .np-sec{flex-wrap:wrap;gap:2px 12px;font-size:20px}
+  .np-story h3{font-size:22px}
+  .np-foot{flex-direction:column;align-items:center;gap:8px}
 }
