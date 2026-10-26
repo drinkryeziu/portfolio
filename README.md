@@ -48,7 +48,6 @@ Screens live in `public/images/<app>/{phone,tablet,desktop}/<name>.jpg`. Each ap
 Search `app/page.tsx` for these:
 
 - Résumé photo: put it in `public/images/resume/` and set `PHOTO` at the top of `app/resume/page.tsx`
-- Experience: `[Job title] · [Company]`, `[YEAR]` ranges and the one-line descriptions
 
 ## Update the résumé
 

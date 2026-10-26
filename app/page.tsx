@@ -218,26 +218,38 @@ export default function Home() {
                   <span className="pencil" aria-hidden="true" style={{ right: "0", top: "4px", display: "flex", alignItems: "center", gap: "8px", fontSize: "30px", letterSpacing: "0", transform: "rotate(3deg)" }}><svg width="70" height="40" viewBox="0 0 70 40"><path d="M66 8 C 46 4, 24 14, 6 30" /><path d="M6 30 L 10 16 M6 30 L 20 30" /></svg>still going strong</span></h2>
                 <div style={{ display: "flex", flexDirection: "column", gap: "28px" }}>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 32px" }}>
-                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>[2024] — now</p>
+                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>Live · now</p>
                     <div style={{ flex: "999 1 420px", minWidth: "0", display: "flex", flexDirection: "column", gap: "6px" }}>
                       <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>Founder, designer <span style={{ textDecoration: "line-through", textDecorationThickness: "2px" }}>& everything else</span> <span style={{ color: "#3a30b0" }}>& developer</span> · KRZResumeBuilder</h3>
                       <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>Designed and built a resume-tailoring web app end to end: product strategy, UX, interface, and the AI that matches profiles to job descriptions.</p>
+                      <a href="/work/krzresumebuilder" style={{ alignSelf: "flex-start", padding: "6px 0", fontSize: "15px", fontWeight: "700", color: "#3a30b0" }}>view the screens →</a>
                     </div>
                   </div>
                   <div style={{ borderTop: "2px dashed #1d1a17" }}></div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 32px" }}>
-                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>[2022] — [2024]</p>
+                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>In progress</p>
                     <div style={{ flex: "999 1 420px", minWidth: "0", display: "flex", flexDirection: "column", gap: "6px" }}>
-                      <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>[Job title] · [Company]</h3>
-                      <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>[What you owned, what you shipped, and the result it had.]</p>
+                      <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>Designer & developer · KRZApplyAi</h3>
+                      <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>A job board that reads your CV once, finds matching roles across 50+ boards, tailors a CV and cover letter for each, and applies for you.</p>
+                      <a href="/work/krzapplyai" style={{ alignSelf: "flex-start", padding: "6px 0", fontSize: "15px", fontWeight: "700", color: "#3a30b0" }}>view the screens →</a>
                     </div>
                   </div>
                   <div style={{ borderTop: "2px dashed #1d1a17" }}></div>
                   <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 32px" }}>
-                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>[2020] — [2022]</p>
+                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>Prototype</p>
                     <div style={{ flex: "999 1 420px", minWidth: "0", display: "flex", flexDirection: "column", gap: "6px" }}>
-                      <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>[Job title] · [Company]</h3>
-                      <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>[What you owned, what you shipped, and the result it had.]</p>
+                      <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>Designer & developer · Lundro</h3>
+                      <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>Boat rentals on North Carolina lakes: a renter site, an owner dashboard and an admin console, designed and prototyped as one product.</p>
+                      <a href="/work/lundro" style={{ alignSelf: "flex-start", padding: "6px 0", fontSize: "15px", fontWeight: "700", color: "#3a30b0" }}>view the screens →</a>
+                    </div>
+                  </div>
+                  <div style={{ borderTop: "2px dashed #1d1a17" }}></div>
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: "4px 32px" }}>
+                    <p style={{ margin: "0", flex: "0 0 180px", fontSize: "15px", fontWeight: "700" }}>2005 — now</p>
+                    <div style={{ flex: "999 1 420px", minWidth: "0", display: "flex", flexDirection: "column", gap: "10px" }}>
+                      <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.15" }}>Before the apps: 20+ years of UX</h3>
+                      <p style={{ margin: "0", fontSize: "16px", lineHeight: "26px" }}>Senior Product Designer at Lowe&apos;s, and before that First Bank, Wells Fargo and NLB Bank. The full story is in my resume.</p>
+                      <a href="/resume" className="dm-btn line" style={{ alignSelf: "flex-start" }}>MY RESUME →</a>
                     </div>
                   </div>
                 </div>
@@ -290,7 +302,6 @@ export default function Home() {
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
                   <a href="mailto:drinkryeziu@gmail.com" className="dm-btn paper-solid">EMAIL ME</a>
                   <a href="https://www.linkedin.com/in/drinkryeziu/" className="dm-btn paper-line">LINKEDIN</a>
-                  <a href="https://github.com/drinkryeziu" className="dm-btn paper-line">GITHUB</a>
                 </div>
               </div>
               </div>
