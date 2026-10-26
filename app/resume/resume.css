@@ -10,7 +10,8 @@
     radial-gradient(circle at 30% 88%,rgba(150,110,50,.07) 0 4%,transparent 10%)}
 .np-sheet{position:relative;max-width:1180px;margin:0 auto;padding:20px 24px 64px;box-sizing:border-box}
 .np a{color:inherit}
-.np-ink{filter:url(#ink)}
+/* Ink bleed only on desktop with a mouse: iPhone/iPad Safari draws SVG-filtered text twice (a ghost copy offset over the page). */
+@media (min-width:981px) and (hover:hover) and (pointer:fine){.np-ink{filter:url(#ink)}}
 
 /* top strip */
 .np-strip{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-size:13px;letter-spacing:1px;text-transform:uppercase;padding:6px 0}
