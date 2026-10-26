@@ -23,6 +23,7 @@ Import the repo on [Vercel](https://vercel.com/new) and keep the defaults (frame
 | --- | --- |
 | `/` | Home: intro, dev projects, graphic design, experience, skills, contact (`app/page.tsx`) |
 | `/logos`, `/posters`, `/book-covers`, `/watches` | Polaroid galleries (`app/[category]/page.tsx` + `components/GalleryPage.tsx`) |
+| `/resume` | Résumé as an old newspaper, with a PDF download (`app/resume/`) |
 | `/work/krzresumebuilder`, `/work/krzapplyai`, `/work/lundro` | App screens with Phone / Tablet / Desktop tabs (`app/work/<app>/page.tsx` + `components/screens/`) |
 
 ## Add graphic design work
@@ -46,8 +47,12 @@ Screens live in `public/images/<app>/{phone,tablet,desktop}/<name>.jpg`. Each ap
 
 Search `app/page.tsx` for these:
 
-- The Download CV button (points to `#contact` for now)
+- Résumé photo: put it in `public/images/resume/` and set `PHOTO` at the top of `app/resume/page.tsx`
 - Experience: `[Job title] · [Company]`, `[YEAR]` ranges and the one-line descriptions
+
+## Update the résumé
+
+Replace `public/DrinKryeziu_Resume_05-2026.pdf` (or add a new file and change `PDF` in `app/resume/page.tsx`). The newspaper text lives in the same file.
 
 ## Design notes
 

@@ -86,7 +86,7 @@ export default function Home() {
               <p style={{ margin: "0", maxWidth: "520px", fontSize: "18px", lineHeight: "52px" }}>I&apos;m Drin Kryeziu, a graphic designer<span style={{ position: "relative", display: "inline-block", width: "0.7em", height: "1em" }}><svg aria-hidden="true" style={{ position: "absolute", left: "0.04em", top: "-0.1em", width: "0.62em", height: "0.6em", overflow: "visible" }} viewBox="0 0 20 20"><path d="M1.5 1 C 5 7, 8 13, 10.2 19 C 12.4 13.5, 15.2 7, 18.8 0.5" fill="none" stroke="#3a30b0" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" /></svg><span style={{ position: "absolute", left: "-0.9em", bottom: "1.02em", whiteSpace: "nowrap", fontFamily: "Caveat, cursive", fontSize: "22px", fontWeight: "600", lineHeight: "1", color: "#3a30b0", transform: "rotate(-3deg)", transformOrigin: "left bottom" }}>, UX designer</span></span>and developer: I design brands and apps, then build them. Now open to roles and freelance projects. <span style={{ fontStyle: "italic" }}>— D.K.</span></p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
                 <a href="#work" className="dm-btn solid dm-fill">SEE THE WORK ↓</a>
-                <a href="#contact" className="dm-btn line">DOWNLOAD CV</a>
+                <a href="/resume" className="dm-btn line">MY RESUME</a>
               </div>
             </div>
           </section>
