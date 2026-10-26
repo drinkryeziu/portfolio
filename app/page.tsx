@@ -1,6 +1,7 @@
 /* Home page — "the desk": hero, dev projects (dot-matrix printouts), graphic design (Polaroids),
    experience, skills and contact. Converted from the approved Paper design. */
 /* eslint-disable @next/next/no-img-element */
+import Pen from "@/components/Pen";
 import { getGallery } from "@/lib/galleries";
 
 /** Piece count for a gallery, so the home page labels stay in sync with lib/galleries.ts. */
@@ -76,7 +77,7 @@ export default function Home() {
 
         <main id="top">
 
-          <section style={{ maxWidth: "1120px", margin: "0 auto", padding: "72px 24px 56px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "24px" }}>
+          <section className="hero-desk" style={{ position: "relative", maxWidth: "1120px", margin: "0 auto", padding: "72px 24px 56px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "24px" }}>
             <p style={{ margin: "0", fontSize: "14px", letterSpacing: "3px", textTransform: "uppercase" }}>Portfolio — No. 001 — Oct. 2026</p>
             <h1 style={{ position: "relative", margin: "0", fontFamily: "'Special Elite', monospace", fontWeight: "400", lineHeight: "0.95", letterSpacing: "-2px" }}>
               <span className="pencil" aria-hidden="true" style={{ right: "2%", bottom: "62%", display: "flex", flexDirection: "column", alignItems: "flex-start", gap: "2px", fontSize: "34px", letterSpacing: "0", transform: "rotate(-6deg)" }}>the fun part!
@@ -93,6 +94,7 @@ export default function Home() {
                 <a href="/resume" className="dm-btn line">MY RESUME</a>
               </div>
             </div>
+            <Pen className="hero-pen" />
           </section>
 
           <section id="work" style={{ maxWidth: "1120px", margin: "0 auto", padding: "48px 24px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: "40px" }}>
