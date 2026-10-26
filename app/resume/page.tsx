@@ -194,24 +194,41 @@ export default function ResumePage() {
         </div>
 
         <h2 className="np-sec np-ink">
-          Letters to the Editor <small>A word from a former manager</small>
+          Letters to the Editor <small>From people who have worked with him</small>
         </h2>
-        <section className="np-letter" aria-label="Reference from Ajay Pillai">
-          <p className="np-letter-head np-ink">&ldquo;I hit the jackpot with him.&rdquo;</p>
-          <div className="np-letter-body">
-            <p className="np-drop">
-              Ajay Pillai hired Drin as a UX engineer on his Wells Fargo team, and writes that the decision paid off quickly. Drin arrived with a strong portfolio, and Pillai warned him that a large bank leaves little room for creative freedom. Drin took that as a brief rather than a limit: he worked closely with product owners, stayed inside the bank&apos;s design guardrails, and still turned their needs into thoughtful UX and CX designs and prototypes, fast.
+        <div className="np-letters">
+          <section className="np-letter" aria-label="Reference from Ajay Pillai">
+            <p className="np-letter-head np-ink">&ldquo;I hit the jackpot with him.&rdquo;</p>
+            <div className="np-letter-body">
+              <p className="np-drop">
+                Ajay Pillai hired Drin as a UX engineer on his Wells Fargo team, and writes that the decision paid off quickly. Drin arrived with a strong portfolio, and Pillai warned him that a large bank leaves little room for creative freedom. Drin took that as a brief rather than a limit: he worked closely with product owners, stayed inside the bank&apos;s design guardrails, and still turned their needs into thoughtful UX and CX designs and prototypes, fast.
+              </p>
+              <p>
+                His work ethic kept development moving at a steady pace, and he held tightly to deadlines. Beyond the craft, Pillai remembers the attitude: positive, eager and can-do, valued not only by him but by everyone on his team. He describes Drin as a joy to work with, and calls his letter only a snapshot of what Drin brings.
+              </p>
+            </div>
+            <p className="np-letter-sign np-ink">
+              Ajay Pillai
+              <small>Software Engineering Manager, Wells Fargo Technology · Drin&apos;s hiring manager</small>
             </p>
-            <p>
-              His work ethic kept development moving at a steady pace, and he held tightly to deadlines. Beyond the craft, Pillai remembers the attitude: positive, eager and can-do, valued not only by him but by everyone on his team. He describes Drin as a joy to work with, and calls his letter only a snapshot of what Drin brings.
+          </section>
+          <section className="np-letter" aria-label="Reference from Fatos Shita">
+            <p className="np-letter-head np-ink">&ldquo;I miss&ldquo;I miss … the joy in working with him.&rdquo;nbsp;… the joy in working with him.&rdquo;</p>
+            <div className="np-letter-body">
+              <p className="np-drop">
+                Fatos Shita has known Drin since the late &apos;90s, when both ran their own design studios. Even then, he writes, Drin stood out as a deeply knowledgeable designer with an exceptional work ethic, and the two traded tips and practices across their projects.
+              </p>
+              <p>
+                That trust is why, around 2016–17, Shita recommended Drin for the design team at Dimensional Fund Advisors. Drin settled in quickly, kept financial content true to the firm&apos;s brand guidelines, and carried print and web projects side by side. Shita says he misses Drin&apos;s work ethic, creativity and personality, and the plain joy of working with him.
+              </p>
+            </div>
+            <p className="np-letter-sign np-ink">
+              Fatos Shita
+              <small>Designer · Drin&apos;s colleague at Dimensional Fund Advisors, and a fellow studio owner since the late &apos;90s</small>
             </p>
-          </div>
-          <p className="np-letter-sign np-ink">
-            Ajay Pillai
-            <small>Software Engineering Manager, Wells Fargo Technology · Drin&apos;s hiring manager</small>
-          </p>
-          <p className="np-letter-note">Summarized from his reference letter. Contact details available on request.</p>
-        </section>
+          </section>
+        </div>
+        <p className="np-letter-note">Summarized from their reference letters. Contact details available on request.</p>
 
         <h2 className="np-sec np-ink">
           Classifieds <small>Skills, tools and specialties</small>
