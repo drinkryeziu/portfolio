@@ -11,7 +11,7 @@ export type Screen = {
   /** Image name: /public/images/<app>/<device>/<file>.jpg */
   file: string;
   /** Height of the app's own top bar in the 860px-wide phone capture; it stays pinned while the screen scrolls. */
-  hdr: number;
+  hdr: number; // 0 when the page has no pinned top bar
 };
 
 const TABS: [Device, string][] = [
@@ -93,10 +93,12 @@ export default function ScreensTabs({ app, name, domain, screens }: { app: strin
                 <div className="shot-shadow" style={{ ...frame, width: 322, padding: 11, borderRadius: 52 }}>
                   <StatusBar />
                   <div className="screen" tabIndex={0} aria-label={`${s.label} screen, scrollable`} style={{ height: 603, borderRadius: "0 0 41px 41px" }}>
-                    <div aria-hidden="true" style={{ position: "sticky", top: 0, zIndex: 1, overflow: "hidden", aspectRatio: `860 / ${hdr}`, background: "#ffffff", boxShadow: "0 1px 0 rgba(0,0,0,0.04)" }}>
-                      <img src={src("phone", s.file)} alt="" style={{ display: "block", width: "100%", height: "auto" }} />
-                    </div>
-                    <img src={src("phone", s.file)} alt={alt(s.label)} loading="lazy" style={{ marginTop: `-${((hdr / 860) * 100).toFixed(3)}%` }} />
+                    {hdr > 0 && (
+                      <div aria-hidden="true" style={{ position: "sticky", top: 0, zIndex: 1, overflow: "hidden", aspectRatio: `860 / ${hdr}`, background: "#ffffff", boxShadow: "0 1px 0 rgba(0,0,0,0.04)" }}>
+                        <img src={src("phone", s.file)} alt="" style={{ display: "block", width: "100%", height: "auto" }} />
+                      </div>
+                    )}
+                    <img src={src("phone", s.file)} alt={alt(s.label)} loading="lazy" style={hdr > 0 ? { marginTop: `-${((hdr / 860) * 100).toFixed(3)}%` } : undefined} />
                   </div>
                 </div>
                 <Caption i={i} label={s.label} path={s.path} />
@@ -110,7 +112,7 @@ export default function ScreensTabs({ app, name, domain, screens }: { app: strin
         <section aria-label="Tablet screens" style={grid}>
           {screens.map((s, i) => (
             <figure key={s.file} style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 16, maxWidth: "100%" }}>
-              <div className="shot-shadow" style={{ ...frame, width: 520, maxWidth: "100%", padding: 20, borderRadius: 36 }}>
+              <div className="shot-shadow" style={{ ...frame, width: 500, maxWidth: "100%", padding: 20, borderRadius: 36 }}>
                 <div aria-hidden="true" style={{ position: "absolute", top: 8, left: "50%", width: 6, height: 6, marginLeft: -3, borderRadius: "50%", background: "#1f2a3a" }} />
                 <div className="screen" tabIndex={0} aria-label={`${s.label} screen, scrollable`} style={{ aspectRatio: "820 / 1180", borderRadius: 18 }}>
                   <img src={src("tablet", s.file)} alt={alt(s.label)} loading="lazy" />

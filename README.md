@@ -23,7 +23,7 @@ Import the repo on [Vercel](https://vercel.com/new) and keep the defaults (frame
 | --- | --- |
 | `/` | Home: intro, dev projects, graphic design, experience, skills, contact (`app/page.tsx`) |
 | `/logos`, `/posters`, `/book-covers`, `/watches` | Polaroid galleries (`app/[category]/page.tsx` + `components/GalleryPage.tsx`) |
-| `/work/krzresumebuilder`, `/work/krzapplyai` | App screens with Phone / Tablet / Desktop tabs (`app/work/<app>/page.tsx` + `components/screens/`) |
+| `/work/krzresumebuilder`, `/work/krzapplyai`, `/work/lundro` | App screens with Phone / Tablet / Desktop tabs (`app/work/<app>/page.tsx` + `components/screens/`) |
 
 ## Add graphic design work
 
@@ -48,7 +48,6 @@ Search `app/page.tsx` for these:
 
 - The Download CV button (points to `#contact` for now)
 - Experience: `[Job title] · [Company]`, `[YEAR]` ranges and the one-line descriptions
-- Dev project 03: `[Project name]`, its description and image
 
 ## Design notes
 

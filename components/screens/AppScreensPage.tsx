@@ -23,7 +23,8 @@ export default function AppScreensPage({
   titleParts: [string, string];
   eyebrow: string;
   intro: string;
-  appUrl: string;
+  /** Live app link; leave out when there is no public version yet. */
+  appUrl?: string;
   /** Shown in the desktop address bar. */
   domain: string;
   screens: Screen[];
@@ -52,9 +53,11 @@ export default function AppScreensPage({
             <Link href="/#work" style={{ padding: "12px 0", color: "#1d1a17" }}>
               ← back to the desk
             </Link>
-            <a href={appUrl} style={{ padding: "12px 0", color: "#3a30b0", fontWeight: 700 }}>
-              open the live app ↗
-            </a>
+            {appUrl && (
+              <a href={appUrl} style={{ padding: "12px 0", color: "#3a30b0", fontWeight: 700 }}>
+                open the live app ↗
+              </a>
+            )}
           </nav>
         </header>
 
@@ -84,9 +87,11 @@ export default function AppScreensPage({
           <Link href="/#work" style={{ color: "#1d1a17" }}>
             ← back to the desk
           </Link>
-          <a href={appUrl} style={{ color: "#3a30b0", fontWeight: 700 }}>
-            open the live app ↗
-          </a>
+          {appUrl && (
+            <a href={appUrl} style={{ color: "#3a30b0", fontWeight: 700 }}>
+              open the live app ↗
+            </a>
+          )}
         </footer>
       </div>
     </div>

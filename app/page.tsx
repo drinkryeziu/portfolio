@@ -141,12 +141,13 @@ export default function Home() {
                 <div className="tape" aria-hidden="true" style={{ top: "-18px", left: "-18px", width: "96px", transform: "rotate(-38deg)" }}></div>
                 <div className="tape" aria-hidden="true" style={{ top: "-18px", right: "-18px", width: "96px", transform: "rotate(38deg)" }}></div>
                 <article className="paper fanfold" style={{ padding: "36px 64px 40px", display: "flex", flexDirection: "column", gap: "12px" }}>
-                  <p style={{ margin: "0", display: "flex", justifyContent: "space-between", gap: "8px", fontSize: "12px", letterSpacing: "1px", borderBottom: "1px dashed #1d1a17", paddingBottom: "8px" }}><span>{"> RUN [PROJECT].APP"}</span><span>PAGE 003</span></p>
-                  <div role="img" aria-label="Screenshot placeholder" style={{ height: "180px", border: "2px solid #1d1a17", background: "repeating-linear-gradient(45deg, #e4e0d6 0 2px, #fbfaf6 2px 10px)" }}></div>
-                  <p style={{ margin: "0", fontSize: "13px", fontStyle: "italic" }}>Fig. 3</p>
-                  <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.1" }}>[Project name]</h3>
-                  <p style={{ margin: "0", fontSize: "15px", lineHeight: "24px" }}>[One line on what it does and who it&apos;s for.]</p>
-                  <p style={{ margin: "0", fontSize: "13px", fontWeight: "700", letterSpacing: "2px", color: "#3a30b0" }}>MOBILE APP · [STACK]</p>
+                  <p style={{ margin: "0", display: "flex", justifyContent: "space-between", gap: "8px", fontSize: "12px", letterSpacing: "1px", borderBottom: "1px dashed #1d1a17", paddingBottom: "8px" }}><span><a href="/work/lundro" style={{ color: "inherit" }}>{"> RUN LUNDRO.APP"}</a></span><span>PAGE 003</span></p>
+                  <div style={{ border: "2px solid #1d1a17", overflow: "hidden", background: "#fbfaf6" }}><img src="/images/dev/lundro-dotmatrix.jpg" alt="Lundro home page: Your day on the lake starts here, with a boat search box over a lake scene." style={{ display: "block", width: "100%", height: "auto", mixBlendMode: "multiply" }} /></div>
+                  <p style={{ margin: "0", fontSize: "13px", fontStyle: "italic" }}>Fig. 3 — Lundro, home page.</p>
+                  <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.1" }}>Lundro Boat Rentals</h3>
+                  <p style={{ margin: "0", fontSize: "15px", lineHeight: "24px" }}>Rent pontoons, ski boats and more from verified owners on North Carolina lakes, with a dashboard for owners and a review console for admins.</p>
+                  <p style={{ margin: "0", fontSize: "13px", fontWeight: "700", letterSpacing: "2px", color: "#3a30b0" }}>WEB APP · PROTOTYPE</p>
+                  <a href="/work/lundro" className="dm-btn solid dm-fill" style={{ alignSelf: "flex-start" }}>VIEW APP →</a>
                 </article>
               </div>
             </div>
