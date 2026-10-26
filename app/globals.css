@@ -51,11 +51,11 @@ main h1,main h2,main h3,main p{filter:url(#ink)}
 
 /* ---- Pen on the desk (components/Pen.tsx) ------------------------------- */
 /* No z-index or transform on the box: the layers must blend (multiply) with the paper underneath. */
-.pen-box{position:absolute;width:0;height:0;--pen-len:clamp(230px,27vw,380px)}
+.pen-box{position:absolute;width:0;height:0;--pen-len:clamp(300px,38vw,540px)}
 .pen-layer{position:absolute;left:0;top:0;z-index:41;transform-origin:50% 50%;will-change:transform}
 .pen-layer img{position:absolute;inset:0;display:block;width:100%;height:100%;user-select:none;-webkit-user-drag:none;pointer-events:none}
 .pen-grab{cursor:grab;touch-action:none;padding:0;outline-offset:6px}
 .pen-grab::before{content:"";position:absolute;inset:-12px -4px}/* easier to grab than the thin barrel */
 .pen-grab:focus-visible{outline:2px dashed #3a30b0}
-.hero-pen{left:60%;top:63%}
-@media (max-width:720px){.hero-pen{left:12%;top:auto;bottom:30px}}
+.hero-pen{left:52%;top:62%}
+@media (max-width:720px){.hero-pen{left:8%;top:auto;bottom:34px}}

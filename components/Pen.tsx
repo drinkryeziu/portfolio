@@ -73,7 +73,7 @@ export default function Pen({ className = "", style }: { className?: string; sty
     const side = dx * nx + dy * ny;
     const half = len() / 2;
     st.a += ((side * lever) / half) * (180 / Math.PI) * 0.55;
-    st.roll += side / 9; // barrel radius ≈ 9px at this size
+    st.roll += side / (len() * 0.022); // barrel radius is about 2.2% of the pen length
     st.x += dx;
     st.y += dy;
   }
