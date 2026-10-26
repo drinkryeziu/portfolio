@@ -35,6 +35,7 @@
 .np-col:last-child{border-right:0}
 .np-col.first{padding-left:0}.np-col.last{padding-right:0}
 .np-c3{grid-column:span 3}.np-c4{grid-column:span 4}.np-c5{grid-column:span 5}.np-c6{grid-column:span 6}.np-c8{grid-column:span 8}.np-c9{grid-column:span 9}.np-c12{grid-column:span 12}
+/* No SVG filter on multi-column blocks: Safari draws filtered columns with the text jumbled. */
 .np-text{column-gap:28px;column-rule:1px solid var(--rule);text-align:justify;hyphens:auto}
 .np-text.c2{columns:2}.np-text.c3{columns:3}
 .np-text p{margin:0 0 10px;text-indent:1.2em}
@@ -61,7 +62,7 @@
 .np-story h3{margin:0 0 4px;font-family:'Playfair Display',serif;font-weight:900;font-size:24px;line-height:1.08}
 .np-story .sub{margin:0 0 8px;font-family:'Playfair Display',serif;font-style:italic;font-size:16px;line-height:1.3}
 .np-story .dl{font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:13px}
-.np-story p{margin:0 0 8px;text-align:justify;hyphens:auto}
+.np-story p{text-indent:0;margin:0 0 8px;text-align:justify;hyphens:auto}
 
 /* boxes */
 .np-box{border:2px solid var(--rule);outline:1px solid var(--rule);outline-offset:3px;padding:14px;margin:6px 4px 18px}
@@ -111,7 +112,7 @@
   .np-photo .frame img{object-position:top}
   .np-photo figcaption{text-align:center}
   .np-text,.np-story p{text-align:left;hyphens:auto}
-  .np-text.c2,.np-text.c3{columns:1}.np-ads{columns:1}
+  .np-text.c2,.np-text.c3,.np-ads{columns:auto;column-rule:none}
   .np-drop::first-letter{font-size:58px}
   .np-quote{font-size:22px}
   .np-sec{flex-wrap:wrap;gap:2px 12px;font-size:20px}

@@ -131,7 +131,7 @@ export default function ResumePage() {
 
           <article className="np-col np-c6 np-lead">
             <p className="np-by np-ink">By the Chronicle staff · Cornelius, N.C.</p>
-            <div className="np-text c2 np-ink">
+            <div className="np-text c2">
               <p className="lead np-drop">
                 Drin Kryeziu is a UX/UI and product designer with more than twenty years of international experience across Europe and the United States. His work runs the whole length of a product: user research, wireframes, high-fidelity prototypes and the design systems that hold it all together.
               </p>
@@ -178,7 +178,7 @@ export default function ResumePage() {
         <h2 className="np-sec np-ink">
           Career <small>Two decades of work, most recent first</small>
         </h2>
-        <div className="np-text c3 np-ink" style={{ paddingTop: 16, textAlign: "left" }}>
+        <div className="np-text c3" style={{ paddingTop: 16, textAlign: "left" }}>
           {JOBS.map((j) => (
             <article key={j.title} className="np-story">
               <h3>{j.title}</h3>
@@ -196,7 +196,7 @@ export default function ResumePage() {
         <h2 className="np-sec np-ink">
           Classifieds <small>Skills, tools and specialties</small>
         </h2>
-        <div className="np-ads np-ink">
+        <div className="np-ads">
           <div className="np-ad dark">
             <h5>Wanted</h5>
             <p>Your next product challenge. Experienced designer seeks a team that ships. Write to drinkryeziu@gmail.com.</p>
