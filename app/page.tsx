@@ -1,6 +1,10 @@
 /* Home page — "the desk": hero, dev projects (dot-matrix printouts), graphic design (Polaroids),
    experience, skills and contact. Converted from the approved Paper design. */
 /* eslint-disable @next/next/no-img-element */
+import { getGallery } from "@/lib/galleries";
+
+/** Piece count for a gallery, so the home page labels stay in sync with lib/galleries.ts. */
+const count = (slug: string) => getGallery(slug)?.items.length ?? 0;
 
 export default function Home() {
   return (
@@ -165,7 +169,7 @@ export default function Home() {
                   <div className="photo" style={{ background: "#ffffff", boxSizing: "border-box", padding: "10%" }}><img src="/images/logos/tradewell-logo.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }} /></div>
                   <figcaption style={{ padding: "14px 4px 22px", display: "flex", flexDirection: "column", gap: "2px" }}>
                     <span style={{ fontFamily: "Caveat, cursive", fontSize: "28px", fontWeight: "600", lineHeight: "1", color: "#2b2a6e" }}>Logos</span>
-                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>5 MARKS · OPEN →</span>
+                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>{count("logos")} MARKS · OPEN →</span>
                   </figcaption>
                 </figure></a>
               </div>
@@ -176,7 +180,7 @@ export default function Home() {
                   <div className="photo" style={{ aspectRatio: "500 / 750" }}><img src="/images/posters/poster-kodi-i-jetes.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }} /></div>
                   <figcaption style={{ padding: "14px 4px 22px", display: "flex", flexDirection: "column", gap: "2px" }}>
                     <span style={{ fontFamily: "Caveat, cursive", fontSize: "28px", fontWeight: "600", lineHeight: "1", color: "#2b2a6e" }}>Posters</span>
-                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>4 POSTERS · OPEN →</span>
+                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>{count("posters")} POSTERS · OPEN →</span>
                   </figcaption>
                 </figure></a>
               </div>
@@ -186,7 +190,7 @@ export default function Home() {
                   <div className="photo" style={{ aspectRatio: "300 / 518" }}><img src="/images/book-covers/kopertina-resmejes-finale.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "contain" }} /></div>
                   <figcaption style={{ padding: "14px 4px 22px", display: "flex", flexDirection: "column", gap: "2px" }}>
                     <span style={{ fontFamily: "Caveat, cursive", fontSize: "28px", fontWeight: "600", lineHeight: "1", color: "#2b2a6e" }}>Book Covers</span>
-                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>20 COVERS · OPEN →</span>
+                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>{count("book-covers")} COVERS · OPEN →</span>
                   </figcaption>
                 </figure></a>
               </div>
@@ -196,7 +200,7 @@ export default function Home() {
                   <div className="photo"><img src="/images/home/watches-thumb.jpg" alt="" style={{ display: "block", width: "100%", height: "100%", objectFit: "cover" }} /></div>
                   <figcaption style={{ padding: "14px 4px 22px", display: "flex", flexDirection: "column", gap: "2px" }}>
                     <span style={{ fontFamily: "Caveat, cursive", fontSize: "28px", fontWeight: "600", lineHeight: "1", color: "#2b2a6e" }}>Watches</span>
-                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>45 DESIGNS · OPEN →</span>
+                    <span style={{ fontSize: "12px", letterSpacing: "2px" }}>{count("watches")} DESIGNS · OPEN →</span>
                   </figcaption>
                 </figure></a>
               </div>
