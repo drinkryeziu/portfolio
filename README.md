@@ -23,7 +23,7 @@ Import the repo on [Vercel](https://vercel.com/new) and keep the defaults (frame
 | --- | --- |
 | `/` | Home: intro, dev projects, graphic design, experience, skills, contact (`app/page.tsx`) |
 | `/logos`, `/posters`, `/book-covers`, `/watches` | Polaroid galleries (`app/[category]/page.tsx` + `components/GalleryPage.tsx`) |
-| `/work/krzresumebuilder` | KRZResumeBuilder screens with Phone / Tablet / Desktop tabs (`app/work/krzresumebuilder/page.tsx`) |
+| `/work/krzresumebuilder`, `/work/krzapplyai` | App screens with Phone / Tablet / Desktop tabs (`app/work/<app>/page.tsx` + `components/screens/`) |
 
 ## Add graphic design work
 
@@ -40,7 +40,7 @@ To change the thumbnail of a category on the home page, edit the Polaroid `img` 
 
 ## Add or update app screens
 
-Screens live in `public/images/krzresumebuilder/{phone,tablet,desktop}/<name>.jpg`, and the list is in `components/krz/ScreensTabs.tsx`. Phone captures are 860 px wide. The app's top bar (138 px on public pages, 122 px elsewhere) stays pinned while you scroll.
+Screens live in `public/images/<app>/{phone,tablet,desktop}/<name>.jpg`. Each app's list of screens is in `app/work/<app>/page.tsx`, and its faded background code is in `lib/<app>-code.ts`. Captures are 860 px wide on phone (430 px at 2x), 1230 px on tablet (820 px at 1.5x) and 1440 px on desktop. `hdr` is the height of the app's own top bar in the phone capture, which stays pinned while you scroll.
 
 ## Placeholders to fill in
 

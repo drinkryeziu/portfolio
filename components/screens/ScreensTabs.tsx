@@ -4,24 +4,15 @@ import { useState } from "react";
 
 type Device = "phone" | "tablet" | "desktop";
 
-/** The app's real screens, in the order a user meets them. Images live in /public/images/krzresumebuilder/<device>/<file>.jpg */
-const SCREENS: { label: string; path: string; file: string }[] = [
-  { label: "Home", path: "/", file: "home" },
-  { label: "Sign up", path: "/sign-up", file: "signup" },
-  { label: "Create your profile", path: "/onboarding", file: "onboarding" },
-  { label: "Professional profile", path: "/profile", file: "profile" },
-  { label: "Dashboard", path: "/dashboard", file: "dashboard" },
-  { label: "Job match", path: "/jobs/…/match", file: "match" },
-  { label: "Tailored resume", path: "/jobs/…?doc=resume", file: "resume" },
-  { label: "Cover letter", path: "/jobs/…?doc=cover-letter", file: "cover" },
-  { label: "Documents", path: "/documents", file: "documents" },
-  { label: "Credits", path: "/credits", file: "credits" },
-  { label: "Pricing", path: "/pricing", file: "pricing" },
-];
-
-/** Height of the app's own top bar in the 860px-wide phone captures; it stays pinned while the screen scrolls. */
-const PUBLIC_PAGES = new Set(["/", "/sign-up", "/pricing"]);
-const headerHeight = (path: string) => (PUBLIC_PAGES.has(path) ? 138 : 122);
+export type Screen = {
+  label: string;
+  /** Path shown in the caption and the browser address bar. */
+  path: string;
+  /** Image name: /public/images/<app>/<device>/<file>.jpg */
+  file: string;
+  /** Height of the app's own top bar in the 860px-wide phone capture; it stays pinned while the screen scrolls. */
+  hdr: number;
+};
 
 const TABS: [Device, string][] = [
   ["phone", "PHONE"],
@@ -29,7 +20,6 @@ const TABS: [Device, string][] = [
   ["desktop", "DESKTOP"],
 ];
 
-const src = (device: Device, file: string) => `/images/krzresumebuilder/${device}/${file}.jpg`;
 const no = (i: number) => String(i + 1).padStart(2, "0");
 
 function Caption({ i, label, path, row = false }: { i: number; label: string; path: string; row?: boolean }) {
@@ -79,9 +69,10 @@ function StatusBar() {
 const frame: React.CSSProperties = { background: "linear-gradient(145deg, #2b2a2e, #0e0e10)", boxShadow: "inset 0 0 0 1.5px #4a494f", boxSizing: "border-box", position: "relative" };
 const grid: React.CSSProperties = { maxWidth: 1120, margin: "0 auto", padding: "32px 24px 96px", boxSizing: "border-box", display: "flex", flexWrap: "wrap", justifyContent: "center", gap: "56px 40px" };
 
-export default function ScreensTabs() {
+export default function ScreensTabs({ app, name, domain, screens }: { app: string; name: string; domain: string; screens: Screen[] }) {
   const [tab, setTab] = useState<Device>("phone");
-  const alt = (label: string) => `KRZResumeBuilder ${label} page, ${tab} layout`;
+  const alt = (label: string) => `${name} ${label} page, ${tab} layout`;
+  const src = (device: Device, file: string) => `/images/${app}/${device}/${file}.jpg`;
 
   return (
     <>
@@ -95,8 +86,8 @@ export default function ScreensTabs() {
 
       {tab === "phone" && (
         <section aria-label="Phone screens" style={grid}>
-          {SCREENS.map((s, i) => {
-            const hdr = headerHeight(s.path);
+          {screens.map((s, i) => {
+            const hdr = s.hdr;
             return (
               <figure key={s.file} style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 16 }}>
                 <div className="shot-shadow" style={{ ...frame, width: 322, padding: 11, borderRadius: 52 }}>
@@ -117,7 +108,7 @@ export default function ScreensTabs() {
 
       {tab === "tablet" && (
         <section aria-label="Tablet screens" style={grid}>
-          {SCREENS.map((s, i) => (
+          {screens.map((s, i) => (
             <figure key={s.file} style={{ margin: 0, display: "flex", flexDirection: "column", alignItems: "center", gap: 16, maxWidth: "100%" }}>
               <div className="shot-shadow" style={{ ...frame, width: 520, maxWidth: "100%", padding: 20, borderRadius: 36 }}>
                 <div aria-hidden="true" style={{ position: "absolute", top: 8, left: "50%", width: 6, height: 6, marginLeft: -3, borderRadius: "50%", background: "#1f2a3a" }} />
@@ -133,7 +124,7 @@ export default function ScreensTabs() {
 
       {tab === "desktop" && (
         <section aria-label="Desktop screens" style={{ maxWidth: 1120, margin: "0 auto", padding: "32px 24px 96px", boxSizing: "border-box", display: "flex", flexDirection: "column", gap: 72 }}>
-          {SCREENS.map((s, i) => (
+          {screens.map((s, i) => (
             <figure key={s.file} style={{ margin: 0, display: "flex", flexDirection: "column", gap: 16 }}>
               <div className="shot-shadow" style={{ borderRadius: 12, overflow: "hidden", background: "#e9e7ec", boxShadow: "inset 0 0 0 1px #c9c6cf" }}>
                 <div style={{ display: "flex", alignItems: "center", gap: 14, padding: "10px 14px", background: "#ebe9ee", borderBottom: "1px solid #d3d0d8" }}>
@@ -143,7 +134,8 @@ export default function ScreensTabs() {
                     <span style={{ width: 12, height: 12, borderRadius: "50%", background: "#28c840" }} />
                   </span>
                   <span style={{ flex: 1, minWidth: 0, padding: "6px 14px", borderRadius: 8, background: "#ffffff", fontFamily: "system-ui, sans-serif", fontSize: 13, color: "#4b4757", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}>
-                    krzresumebuilder.com{s.path}
+                    {domain}
+                    {s.path}
                   </span>
                 </div>
                 <div className="screen" tabIndex={0} aria-label={`${s.label} screen, scrollable`} style={{ aspectRatio: "1440 / 900" }}>

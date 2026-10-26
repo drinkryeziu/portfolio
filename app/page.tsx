@@ -128,12 +128,13 @@ export default function Home() {
               <div className="shadow" style={{ transform: "rotate(0.8deg)" }}>
                 <div className="tape" aria-hidden="true" style={{ top: "-21px", left: "50%", marginLeft: "-60px", width: "120px", transform: "rotate(-3deg)" }}></div>
                 <article className="paper fanfold" style={{ padding: "36px 64px 40px", display: "flex", flexDirection: "column", gap: "12px" }}>
-                  <p style={{ margin: "0", display: "flex", justifyContent: "space-between", gap: "8px", fontSize: "12px", letterSpacing: "1px", borderBottom: "1px dashed #1d1a17", paddingBottom: "8px" }}><span>{"> RUN KRZAPPLYAI.APP"}</span><span>PAGE 002</span></p>
+                  <p style={{ margin: "0", display: "flex", justifyContent: "space-between", gap: "8px", fontSize: "12px", letterSpacing: "1px", borderBottom: "1px dashed #1d1a17", paddingBottom: "8px" }}><span><a href="/work/krzapplyai" style={{ color: "inherit" }}>{"> RUN KRZAPPLYAI.APP"}</a></span><span>PAGE 002</span></p>
                   <div style={{ border: "2px solid #1d1a17", overflow: "hidden", background: "#fbfaf6" }}><img src="/images/dev/krzapplyai-dotmatrix.jpg" alt="KRZApplyAi home page: Upload once, apply everywhere, with a job search bar and key stats." style={{ display: "block", width: "100%", height: "auto", mixBlendMode: "multiply" }} /></div>
                   <p style={{ margin: "0", fontSize: "13px", fontStyle: "italic" }}>Fig. 2 — KRZApplyAi, home page.</p>
                   <h3 style={{ margin: "0", fontFamily: "'Special Elite', monospace", fontSize: "30px", fontWeight: "400", lineHeight: "1.1" }}>KRZApplyAi Job Board</h3>
                   <p style={{ margin: "0", fontSize: "15px", lineHeight: "24px" }}>Upload your CV once. KRZApplyAi finds matching roles, tailors your CV and cover letter for each one, and applies while you sleep.</p>
                   <p style={{ margin: "0", fontSize: "13px", fontWeight: "700", letterSpacing: "2px", color: "#3a30b0" }}>WEB APP · IN PROGRESS</p>
+                  <a href="/work/krzapplyai" className="dm-btn solid dm-fill" style={{ alignSelf: "flex-start" }}>VIEW APP →</a>
                 </article>
               </div>
               <div className="shadow" style={{ transform: "rotate(-1deg)" }}>
