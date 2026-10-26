@@ -59,3 +59,42 @@ a{color:#3a30b0}a:hover{color:#1d1a17}
 .pen-grab:focus-visible{outline:2px dashed #3a30b0}
 .hero-pen{left:52%;top:62%}
 @media (max-width:720px){.hero-pen{left:8%;top:auto;bottom:34px}}
+
+/* ---- Contact page: a typed letter on a torn sheet ---------------------- */
+.contact-note{left:calc(100% + 18px);bottom:16px;display:flex;align-items:flex-end;gap:6px;font-size:32px;letter-spacing:0;white-space:nowrap;transform:rotate(-5deg)}
+@media (max-width:820px){.contact-note{position:relative;left:auto;bottom:auto;margin-top:10px;font-size:26px;transform:rotate(-3deg)}}
+.letter{max-width:860px;margin:0 auto}
+.letter-sheet{background-color:#fbf9f4;padding:56px 56px 48px}
+.letter-form,.letter-done{display:flex;flex-direction:column;gap:6px;font-size:18px}
+.letter-row{display:flex;align-items:baseline;gap:14px;border-bottom:1px solid rgba(29,26,23,.35);padding:10px 0 6px;min-width:0}
+.letter-label{flex:0 0 112px;font-family:'Special Elite',monospace;font-size:20px;color:#1d1a17}
+.letter-row input,.letter-msg textarea{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-family:'Courier Prime','Courier New',monospace;font-size:18px;color:#1d1a17;padding:4px 0;outline:none}
+.letter-row input::placeholder,.letter-msg textarea::placeholder{color:#8a8278}
+.letter-row:focus-within{border-bottom:2px solid #3a30b0;padding-bottom:5px}
+.letter-to{flex:1;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;min-width:0}
+.letter-to a{color:#3a30b0;font-weight:700;overflow-wrap:anywhere}
+.letter-copy{border:1px dashed #1d1a17;background:none;font:inherit;font-size:13px;letter-spacing:1px;padding:4px 10px;cursor:pointer;color:#1d1a17;min-height:32px}
+.letter-copy:hover{color:#3a30b0;border-color:#3a30b0}
+.letter-msg{display:flex;flex-direction:column;gap:8px;padding-top:22px}
+.letter-msg .letter-label{flex:none}
+.letter-msg textarea{width:100%;resize:vertical;min-height:288px;line-height:32px;background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(58,48,176,.22) 31px 32px);background-attachment:local;padding:0}
+.letter-msg:focus-within textarea{background-image:repeating-linear-gradient(to bottom,transparent 0 31px,rgba(58,48,176,.45) 31px 32px)}
+.letter-hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.letter-err{margin:12px 0 0;padding:12px 14px;border:2px solid #b42318;color:#8f1d14;font-size:15px;line-height:1.5}
+.letter-err a{color:#3a30b0}
+.letter-send{display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px;padding-top:26px}
+.letter-send .dm-btn{border:0;cursor:pointer}
+.letter-send .dm-btn[disabled]{opacity:.6;cursor:wait}
+.letter-alt{font-size:14px;color:#5a554e}
+.letter-alt a{color:#3a30b0}
+.letter-done{gap:16px}
+.letter-done p{margin:0;font-size:18px;line-height:30px}
+.letter-h{margin:0;font-family:'Special Elite',monospace;font-weight:400;font-size:clamp(36px,6vw,56px);line-height:1}
+.letter-stamp{align-self:flex-start;margin:0;padding:4px 14px;border:3px solid #3a30b0;color:#3a30b0;font-family:'Special Elite',monospace;font-size:22px!important;letter-spacing:4px;text-transform:uppercase;transform:rotate(-4deg)}
+@media (max-width:640px){
+  .letter-sheet{padding:40px 20px 32px}
+  .letter-row{flex-wrap:wrap;gap:2px 10px}
+  .letter-row .letter-label{flex-basis:100%;font-size:17px}
+  .letter-msg .letter-label{font-size:17px}
+  .letter-form,.letter-row input,.letter-msg textarea{font-size:16px}
+}

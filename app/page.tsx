@@ -71,7 +71,7 @@ export default function Home() {
             <a href="#work" style={{ padding: "12px 0", color: "#1d1a17" }}>work</a>
             <a href="#experience" style={{ padding: "12px 0", color: "#1d1a17" }}>experience</a>
             <a href="#skills" style={{ padding: "12px 0", color: "#1d1a17" }}>skills</a>
-            <a href="#contact" style={{ padding: "12px 0", color: "#3a30b0", fontWeight: "700" }}>write to me →</a>
+            <a href="/contact" style={{ padding: "12px 0", color: "#3a30b0", fontWeight: "700" }}>write to me →</a>
           </nav>
         </header>
 
@@ -302,7 +302,7 @@ export default function Home() {
                 </h2>
                 <p style={{ margin: "0", maxWidth: "560px", fontSize: "17px", lineHeight: "28px" }}>Have a project in mind? Get in touch with me, and we&apos;ll figure out how to bring it to life.</p>
                 <div style={{ display: "flex", flexWrap: "wrap", gap: "12px" }}>
-                  <a href="mailto:drinkryeziu@gmail.com" className="dm-btn paper-solid">EMAIL ME</a>
+                  <a href="/contact" className="dm-btn paper-solid">EMAIL ME</a>
                   <a href="https://www.linkedin.com/in/drinkryeziu/" className="dm-btn paper-line">LINKEDIN</a>
                 </div>
               </div>

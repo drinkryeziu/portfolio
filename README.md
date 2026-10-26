@@ -23,6 +23,7 @@ Import the repo on [Vercel](https://vercel.com/new) and keep the defaults (frame
 | --- | --- |
 | `/` | Home: intro, dev projects, graphic design, experience, skills, contact (`app/page.tsx`) |
 | `/logos`, `/posters`, `/book-covers`, `/watches` | Polaroid galleries (`app/[category]/page.tsx` + `components/GalleryPage.tsx`) |
+| `/contact` | "Write to me" letter form that emails drinkryeziu@gmail.com (`app/contact/`, `components/ContactForm.tsx`, `app/api/contact/route.ts`) |
 | `/resume` | Résumé as an old newspaper, with a PDF download (`app/resume/`) |
 | `/work/krzresumebuilder`, `/work/krzapplyai`, `/work/lundro` | App screens with Phone / Tablet / Desktop tabs (`app/work/<app>/page.tsx` + `components/screens/`) |
 
@@ -47,6 +48,16 @@ Screens live in `public/images/<app>/{phone,tablet,desktop}/<name>.jpg`. Each ap
 
 None right now. To change the résumé photo, replace `public/images/resume/drin.jpg` (a newspaper-style halftone, 800×1000).
 
+
+## Contact form email
+
+The form posts to `/api/contact`, which sends the message with [Resend](https://resend.com).
+
+1. Sign up at resend.com with **drinkryeziu@gmail.com** and create an API key.
+2. In Vercel: Project → Settings → Environment Variables, add `RESEND_API_KEY` = that key (Production), then redeploy.
+3. Optional, once drinkryeziu.com is verified in Resend: add `CONTACT_FROM` = `Portfolio <hello@drinkryeziu.com>`.
+
+Until the key is set, the form opens the visitor's own mail app with the subject and message filled in.
 
 ## Update the résumé
 
