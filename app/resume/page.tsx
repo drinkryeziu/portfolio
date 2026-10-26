@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 
 const PDF = "/DrinKryeziu_Resume_05-2026.pdf";
 /** Put your photo in /public/images/resume/ and set its path here, e.g. "/images/resume/drin.jpg". */
-const PHOTO: string | null = null;
+const PHOTO: string | null = "/images/resume/drin.jpg";
 
 const FONTS =
   "https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;0,900;1,400;1,700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap";

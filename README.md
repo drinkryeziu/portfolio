@@ -45,9 +45,8 @@ Screens live in `public/images/<app>/{phone,tablet,desktop}/<name>.jpg`. Each ap
 
 ## Placeholders to fill in
 
-Search `app/page.tsx` for these:
+None right now. To change the résumé photo, replace `public/images/resume/drin.jpg` (a newspaper-style halftone, 800×1000).
 
-- Résumé photo: put it in `public/images/resume/` and set `PHOTO` at the top of `app/resume/page.tsx`
 
 ## Update the résumé
 
