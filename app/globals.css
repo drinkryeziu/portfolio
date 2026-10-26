@@ -58,6 +58,15 @@ a{color:#3a30b0}a:hover{color:#1d1a17}
 .pen-grab::before{content:"";position:absolute;inset:-12px -4px}/* easier to grab than the thin barrel */
 .pen-grab:focus-visible{outline:2px dashed #3a30b0}
 .hero-pen{left:52%;top:62%}
+/* drawing with the pen: a screen-sized ink layer that redraws on scroll; the held pen tilts in 3D around its tip */
+.ink-sheet{position:fixed;inset:0;width:100vw;height:100vh;z-index:39;pointer-events:none;mix-blend-mode:multiply}
+.ink-sheet.is-drawing{pointer-events:auto;touch-action:none;cursor:none}
+.hand-pen{position:fixed;left:0;top:0;z-index:43;transform-origin:0 0;pointer-events:none;max-width:none;display:block;user-select:none;-webkit-user-drag:none}
+.hand-pen[hidden]{display:none}
+.hand-pen-shadow,.hand-pen-clear{mix-blend-mode:multiply}
+.hand-bar{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:45;display:flex;flex-wrap:wrap;justify-content:center;gap:10px;width:max-content;max-width:calc(100vw - 32px)}
+.hand-bar .dm-btn{min-height:44px;padding:0 18px;font-size:15px;cursor:pointer;border:0;border-radius:0;background-color:transparent}
+.hand-bar .dm-btn.line{border:3px dotted #1d1a17;background:#fbf9f4}
 @media (max-width:720px){.hero-pen{left:8%;top:auto;bottom:34px}}
 
 /* ---- Contact page: a typed letter on a torn sheet ---------------------- */
