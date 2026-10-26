@@ -1,0 +1,50 @@
+/* Drin Kryeziu portfolio — paper, typewriter ink, tape and coffee.
+   Colors: ink #1d1a17 · paper #efebe2 / #fbf9f4 · indigo accent #3a30b0 · pencil #4a4a4a
+   Fonts: Special Elite (headlines), Courier Prime (body), Caveat (handwriting), DotGothic16 (dot-matrix buttons). */
+
+/* ---- Home page ---------------------------------------------------------- */
+body{margin:0;background:#efebe2}
+a{color:#3a30b0}a:hover{color:#1d1a17}
+.paper{--paper:#fbf9f4;--fiber:#ffffff;position:relative;margin:16px 0;background-image:linear-gradient(172deg,rgba(255,255,255,0.55),rgba(255,255,255,0) 40%,rgba(120,100,70,0.05))}
+.paper::before,.paper::after{content:"";position:absolute;left:0;right:0;height:17px;pointer-events:none;background:linear-gradient(to bottom,var(--fiber) 0%,var(--fiber) 38%,var(--paper) 78%);clip-path:polygon(0% 62%,1.6% 40%,2.9% 55%,4.1% 22%,5.8% 48%,7.2% 30%,8.1% 66%,9.9% 41%,11.4% 18%,12.6% 44%,14.5% 35%,15.7% 58%,17.9% 27%,19.2% 46%,20.4% 12%,22.3% 39%,23.8% 52%,25.1% 24%,27.4% 43%,28.6% 31%,30.2% 61%,31.9% 37%,33.5% 20%,35.1% 49%,36.8% 33%,38.2% 56%,40.3% 28%,41.7% 42%,43.1% 15%,45% 45%,46.6% 36%,48.1% 63%,49.7% 30%,51.6% 47%,53.2% 21%,54.5% 40%,56.4% 55%,58% 26%,59.3% 44%,61.2% 34%,62.8% 60%,64.1% 29%,66% 17%,67.6% 46%,69.1% 38%,70.9% 57%,72.4% 25%,74% 42%,75.7% 13%,77.2% 48%,78.9% 33%,80.3% 59%,82.1% 31%,83.6% 45%,85.4% 19%,86.9% 41%,88.5% 53%,90.2% 27%,91.8% 44%,93.3% 35%,95.1% 62%,96.6% 23%,98.2% 47%,100% 38%,100% 100%,0% 100%)}
+.paper::before{top:-16px}
+.paper::after{bottom:-16px;transform:scale(-1,-1)}
+.tape{position:absolute;z-index:2;width:128px;height:34px;background:linear-gradient(180deg,rgba(236,228,206,0.82),rgba(222,212,186,0.78));background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.18) 0 2px,rgba(255,255,255,0) 2px 7px),linear-gradient(180deg,rgba(236,228,206,0.84),rgba(220,210,184,0.8));clip-path:polygon(0% 6%,3% 0%,6% 9%,9% 2%,12% 0%,88% 0%,91% 7%,94% 1%,97% 8%,100% 3%,98% 22%,100% 41%,97% 60%,100% 78%,98% 100%,95% 93%,92% 100%,89% 94%,86% 100%,14% 100%,11% 92%,8% 100%,5% 94%,2% 100%,0% 84%,3% 63%,0% 45%,2% 26%)}
+.pencil{position:absolute;pointer-events:none;color:#4a4a4a;font-family:Caveat,cursive;font-weight:600;line-height:1}
+.pencil svg{display:block;overflow:visible}
+.pencil path,.pencil ellipse{fill:none;stroke:#4a4a4a;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:url(#pencilgrain);opacity:0.85}
+.fanfold{--paper:#fbfaf6;background-color:#fbfaf6;background-image:radial-gradient(circle,#d8d1c3 0 4.6px,rgba(70,52,30,0.45) 5.2px,rgba(70,52,30,0.12) 6.4px,rgba(70,52,30,0) 7.4px),radial-gradient(circle,#d8d1c3 0 4.6px,rgba(70,52,30,0.45) 5.2px,rgba(70,52,30,0.12) 6.4px,rgba(70,52,30,0) 7.4px),linear-gradient(to bottom,rgba(70,52,30,0.35) 0 4px,rgba(0,0,0,0) 4px 8px),linear-gradient(to bottom,rgba(70,52,30,0.35) 0 4px,rgba(0,0,0,0) 4px 8px),repeating-linear-gradient(to bottom,rgba(150,192,150,0.17) 0 30px,rgba(0,0,0,0) 30px 60px),linear-gradient(172deg,rgba(255,255,255,0.5),rgba(255,255,255,0) 40%,rgba(120,100,70,0.05));background-size:36px 36px,36px 36px,1px 8px,1px 8px,calc(100% - 92px) 100%,100% 100%;background-position:0 6px,right 0 top 6px,40px 0,right 40px top 0,center 0,0 0;background-repeat:repeat-y,repeat-y,repeat-y,repeat-y,no-repeat,no-repeat}
+.polaroid{background:#fcfcfa;background-image:linear-gradient(165deg,rgba(255,255,255,0.9),rgba(255,255,255,0) 35%,rgba(110,100,90,0.06));padding:6% 6% 0;display:flex;flex-direction:column}
+.polaroid .photo{position:relative;aspect-ratio:1/1;overflow:hidden;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.25),inset 0 0 24px rgba(0,0,0,0.45)}
+.polaroid .photo::after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,255,255,0.22),rgba(255,255,255,0) 38%,rgba(255,255,255,0) 62%,rgba(255,240,210,0.08))}
+.dm-fill{background-color:transparent;background-image:repeating-linear-gradient(to bottom,rgba(251,249,244,0) 0 29px,rgba(251,249,244,0.16) 29px 32px,rgba(251,249,244,0) 32px 64px,rgba(251,249,244,0.07) 64px 96px),radial-gradient(circle,#1d1a17 0 1.55px,rgba(29,26,23,0.55) 1.85px,rgba(29,26,23,0) 2.1px);background-size:100% 96px,3.6px 3.6px}
+.dm-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 24px;box-sizing:border-box;font-family:'DotGothic16',monospace;font-size:18px;letter-spacing:2px;text-decoration:none;filter:url(#ink)}
+.dm-btn.solid{color:#fbf9f4}
+.dm-btn.solid:hover{color:#a9a2ff}
+.dm-btn.line{color:#1d1a17;border:3px dotted #1d1a17}
+.dm-btn.line:hover{color:#3a30b0;border-color:#3a30b0}
+.dm-btn.paper-solid{background:#fbf9f4;color:#1d1a17}
+.dm-btn.paper-solid:hover{color:#3a30b0}
+.dm-btn.paper-line{color:#fbf9f4;border:3px dotted #fbf9f4}
+.dm-btn.paper-line:hover{color:#a9a2ff;border-color:#a9a2ff}
+.shadow{position:relative;filter:drop-shadow(0.6px 0.8px 0.6px rgba(30,22,12,0.32)) drop-shadow(2px 3px 3px rgba(50,38,22,0.14)) drop-shadow(8px 12px 16px rgba(50,38,22,0.12)) drop-shadow(18px 28px 36px rgba(50,38,22,0.07))}
+main h1,main h2,main h3,main p{filter:url(#ink)}
+
+/* ---- Graphic design galleries (Logos, Posters, Book covers, Watches) ---- */
+.gallery .tape{width:96px;height:32px;background:none;background-image:repeating-linear-gradient(90deg,rgba(255,255,255,0.18) 0 2px,rgba(255,255,255,0) 2px 7px),linear-gradient(180deg,rgba(236,228,206,0.84),rgba(220,210,184,0.8))}
+.gallery .polaroid{margin:0;padding:16px 16px 0}
+.gallery .polaroid .photo{aspect-ratio:auto;background:#f4f2ee;box-shadow:inset 0 0 0 1px rgba(0,0,0,0.18)}
+.gallery .polaroid .photo::after{box-shadow:inset 0 0 18px rgba(0,0,0,0.22);background:linear-gradient(135deg,rgba(255,255,255,0.2),rgba(255,255,255,0) 38%,rgba(255,255,255,0) 62%,rgba(255,240,210,0.08))}
+.cat{padding:12px 0;color:#1d1a17}
+.cat[aria-current="page"]{color:#3a30b0;font-weight:700;text-decoration-thickness:2px}
+
+/* ---- App screens page (KRZResumeBuilder) -------------------------------- */
+.ink{filter:url(#ink)}
+.code{position:absolute;margin:0;font-family:'Courier Prime','Courier New',monospace;font-size:15px;line-height:26px;color:#1d1a17;opacity:0.075;white-space:pre;pointer-events:none;user-select:none}
+.tab{display:inline-flex;align-items:center;gap:10px;min-height:48px;padding:0 22px;font-family:'DotGothic16',monospace;font-size:18px;letter-spacing:2px;cursor:pointer;border:3px dotted #1d1a17;background:transparent;color:#1d1a17}
+.tab:hover{color:#3a30b0;border-color:#3a30b0}
+.tab:focus-visible{outline:3px solid #3a30b0;outline-offset:3px}
+.tab[aria-pressed="true"]{background:#1d1a17;color:#fbf9f4;border-color:#1d1a17;border-style:solid}
+.screen{overflow-y:auto;overflow-x:hidden;background:#ffffff;scrollbar-width:thin}
+.screen img{display:block;width:100%;height:auto}
+.shot-shadow{filter:drop-shadow(1px 2px 2px rgba(30,22,12,0.25)) drop-shadow(8px 14px 18px rgba(50,38,22,0.16)) drop-shadow(18px 30px 40px rgba(50,38,22,0.08))}
