@@ -213,10 +213,10 @@ export default function ResumePage() {
             </p>
           </section>
           <section className="np-letter" aria-label="Reference from Fatos Shita">
-            <p className="np-letter-head np-ink">&ldquo;I miss&ldquo;I miss … the joy in working with him.&rdquo;nbsp;… the joy in working with him.&rdquo;</p>
+            <p className="np-letter-head np-ink">&ldquo;His work ethic was exceptional.&rdquo;</p>
             <div className="np-letter-body">
               <p className="np-drop">
-                Fatos Shita has known Drin since the late &apos;90s, when both ran their own design studios. Even then, he writes, Drin stood out as a deeply knowledgeable designer with an exceptional work ethic, and the two traded tips and practices across their projects.
+                Fatos Shita has known Drin since the late &apos;90s, when each of them ran his own design studio. Even then, he writes, Drin stood out as a deeply knowledgeable designer with an exceptional work ethic. The two collaborated on some projects and traded tips and practices along the way.
               </p>
               <p>
                 That trust is why, around 2016–17, Shita recommended Drin for the design team at Dimensional Fund Advisors. Drin settled in quickly, kept financial content true to the firm&apos;s brand guidelines, and carried print and web projects side by side. Shita says he misses Drin&apos;s work ethic, creativity and personality, and the plain joy of working with him.
@@ -224,7 +224,7 @@ export default function ResumePage() {
             </div>
             <p className="np-letter-sign np-ink">
               Fatos Shita
-              <small>Designer · Drin&apos;s colleague at Dimensional Fund Advisors, and a fellow studio owner since the late &apos;90s</small>
+              <small>Designer · Drin&apos;s colleague at Dimensional Fund Advisors; ran his own studio alongside Drin&apos;s in the late &apos;90s</small>
             </p>
           </section>
         </div>
